@@ -1,11 +1,9 @@
 {
     "rewrites": [
-        {
-            "source": "/(.*)",
-            "destination": "/"
-        }
-    ],
-    "outputDirectory": "",
-    "installCommand": "",
-    "buildCommand": ""
-}
+      {
+        "source": "/(.*)",
+        "destination": "/index.html"
+      }
+    ]
+  }
+  
