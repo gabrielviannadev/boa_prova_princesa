@@ -52,10 +52,6 @@ class _MotivationScreenState extends State<MotivationScreen> {
       'text': 'Te amo princesa ❤️',
       'colors': [const Color(0xFFFF9A9E), const Color(0xFFFAD0C4)]
     },
-    {
-      'text': '🎵❤️',
-      'colors': [const Color.fromARGB(255, 36, 36, 36), const Color.fromARGB(255, 45, 0, 168)]
-    },
   ];
 
   void _nextPage() {
@@ -63,6 +59,9 @@ class _MotivationScreenState extends State<MotivationScreen> {
       setState(() {
         _currentPage++;
       });
+      if (_currentPage == _messages.length - 1 && !_hasPlayedMusic) {
+        _playMusic();
+      }
     }
   }
 
@@ -86,9 +85,6 @@ class _MotivationScreenState extends State<MotivationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: _messages[_currentPage]['colors'][0],
-      ),
       body: GestureDetector(
         onTap: _nextPage,
         child: AnimatedContainer(
@@ -122,11 +118,6 @@ class _MotivationScreenState extends State<MotivationScreen> {
                         : '',
                     style: const TextStyle(fontSize: 18, color: Colors.white70),
                   ),
-                  if(_currentPage == _messages.length - 1) ...[
-                    ElevatedButton(onPressed: () {
-                      _playMusic();
-                    }, child: const Text('Ouvir agora'))
-                  ]
                 ],
               ),
             ),
