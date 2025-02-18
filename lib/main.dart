@@ -52,10 +52,10 @@ class _MotivationScreenState extends State<MotivationScreen> {
       'text': 'Te amo princesa ❤️',
       'colors': [const Color(0xFFFF9A9E), const Color(0xFFFAD0C4)]
     },
-    {
-      'text': '🎵❤️',
-      'colors': [const Color.fromARGB(255, 36, 36, 36), const Color.fromARGB(255, 45, 0, 168)]
-    },
+    // {
+    //   'text': '🎵❤️',
+    //   'colors': [const Color.fromARGB(255, 36, 36, 36), const Color.fromARGB(255, 45, 0, 168)]
+    // },
   ];
 
   void _nextPage() {
