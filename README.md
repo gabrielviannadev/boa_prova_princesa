@@ -1,3 +1,3 @@
-# Uma ótima prova pra minha princesa Júlia
+# Uma ótima prova para minha princesa Júlia
 
 A new Flutter project.
